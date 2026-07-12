@@ -1,0 +1,6 @@
+{
+  "name": "Resume Roster",
+  "description": "A simple and beautiful resume roster for tracking job applicants, uploading resume files, managing screening stages, and logging candidate notes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
