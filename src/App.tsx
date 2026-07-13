@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Briefcase, Award, CheckCircle2, UserCheck, Trash2 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import { Candidate, CandidateStatus, Note } from './types';
 import {
   getCandidates,
@@ -249,7 +250,9 @@ export default function App() {
   };
 
   return (
-    <div id="app-workspace" className="h-screen bg-slate-50 font-sans text-slate-900 antialiased flex overflow-hidden">
+    <>
+      <Analytics />
+      <div id="app-workspace" className="h-screen bg-slate-50 font-sans text-slate-900 antialiased flex overflow-hidden">
       {/* Left Sidebar */}
       <aside className="w-64 bg-slate-900 h-full flex flex-col shrink-0 text-slate-300 border-r border-slate-800">
         {/* Brand Header */}
@@ -404,6 +407,7 @@ export default function App() {
         onClose={() => setIsAddModalOpen(false)}
         onAdd={handleAddCandidate}
       />
-    </div>
+      </div>
+    </>
   );
 }
